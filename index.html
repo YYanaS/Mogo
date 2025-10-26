@@ -88,25 +88,40 @@
                     </li>
                 </ul>
             </nav>
+            <input type="checkbox" id="header__toggle" class="header__toggle">
+            <label for="header__toggle" class="header__btn">
+                <svg class="header__burger-icon," width="24" height="18" viewBox="0 0 24 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z" fill="white" />
+                </svg>
+                <svg class="header__close-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 16.9707L8.48528 8.48542L16.9706 0.000140667L19.0919 2.12146L2.12132 19.092L0 16.9707Z"
+                        fill="white" />
+                    <path d="M2.12134 0L10.6066 8.48528L19.0919 16.9706L16.9706 19.0919L1.75834e-05 2.12132L2.12134 0Z"
+                        fill="white" />
+                </svg>
+            </label>
             <nav class="nav-mobile">
                 <ul class="nav-mobile__list">
                     <li class="nav-mobile__item">
-                        <a href="#about" class="nav__link">about</a>
+                        <a href="#about" class="nav-mobile__link">about</a>
                     </li>
                     <li class="nav-mobile__item">
-                        <a href="#service" class="nav__link">service</a>
+                        <a href="#service" class="nav-mobile__link">service</a>
                     </li>
                     <li class="nav-mobile__item">
-                        <a href="#work" class="nav__link">work</a>
+                        <a href="#work" class="nav-mobile__link">work</a>
                     </li>
                     <li class="nav-mobile__item">
-                        <a href="#blog" class="nav__link">blog</a>
+                        <a href="#blog" class="nav-mobile__link">blog</a>
                     </li>
                     <li class="nav-mobile__item">
-                        <a href="#contact" class="nav__link">contact</a>
+                        <a href="#contact" class="nav-mobile__link">contact</a>
                     </li>
                 </ul>
             </nav>
+            <div class="header__burger-overlay"></div>
         </div>
     </header>
     <section class="welcome">
@@ -117,28 +132,28 @@
             <nav class="welcome__nav">
                 <ul class="welcome__list">
                     <li class="welcome__item">
-                        <a href="#intro" class="welcome__link">
+                        <button class="welcome__btn-list">
                             <span class="welcome__number">01</span>
                             intro
-                        </a>
+                        </button>
                     </li>
                     <li class="welcome__item">
-                        <a href="#works" class="welcome__link">
+                        <button class="welcome__btn-list">
                             <span class="welcome__number">02</span>
                             works
-                        </a>
+                        </button>
                     </li>
                     <li class="welcome__item">
-                        <a href="#about" class="welcome__link">
+                        <button class="welcome__btn-list">
                             <span class="welcome__number">03</span>
                             about
-                        </a>
+                        </button>
                     </li>
                     <li class="welcome__item">
-                        <a href="#contacts" class="welcome__link">
+                        <button class="welcome__btn-list">
                             <span class="welcome__number">04</span>
                             contacts
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>
