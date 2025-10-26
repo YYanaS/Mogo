@@ -1,1 +1,319 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.about {
+  margin-bottom: 66px;
+  text-align: center;
+  color: #2D3033;
+}
+@media (max-width: 1024px) {
+  .about {
+    margin-bottom: 58px;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    margin-bottom: 58.99px;
+  }
+}
+.about__header {
+  margin-bottom: 96px;
+}
+@media (max-width: 1024px) {
+  .about__header {
+    margin-bottom: 82.21px;
+  }
+}
+@media (max-width: 767px) {
+  .about__header {
+    margin-bottom: 33px;
+  }
+}
+.about__title {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 400;
+  font-family: "Kaushan Script", cursive;
+  margin-bottom: 37px;
+}
+@media (max-width: 1024px) {
+  .about__title {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 400;
+    margin-bottom: 34.91px;
+  }
+}
+@media (max-width: 767px) {
+  .about__title {
+    margin-bottom: 36px;
+  }
+}
+.about__heading {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900;
+  margin-bottom: 79px;
+  position: relative;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .about__heading {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+    margin-bottom: 73.82px;
+  }
+}
+@media (max-width: 767px) {
+  .about__heading {
+    margin-bottom: 57px;
+  }
+}
+.about__heading::before {
+  content: "";
+  border-top: 4px solid #F38281;
+  width: 170px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: inline-block;
+  transform: translateX(-50%) translateY(41px);
+}
+@media (max-width: 1024px) {
+  .about__heading::before {
+    width: 148px;
+    transform: translateX(-50%) translateY(41.09px);
+  }
+}
+@media (max-width: 767px) {
+  .about__heading::before {
+    width: 134px;
+    transform: translateX(-50%) translateY(40px);
+  }
+}
+.about__description {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .about__description {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+}
+.about__imgs {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .about__imgs {
+    -moz-column-gap: 17.57px;
+         column-gap: 17.57px;
+  }
+}
+@media (max-width: 767px) {
+  .about__imgs {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
+}
+.about__background {
+  width: 370px;
+  height: 338px;
+  background-color: #95E1D3;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .about__background {
+    width: 320.43px;
+    height: 282.71px;
+  }
+}
+@media (max-width: 767px) {
+  .about__background {
+    width: 288px;
+    height: 258px;
+    background-image: url(../media/super_team_2.webp);
+  }
+}
+.about__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-image: url(../media/super_team_2.webp);
+  position: relative;
+  transition: all 0.3s ease;
+}
+.about__img:hover {
+  top: -16px;
+  left: -16px;
+  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+}
+@media (max-width: 1024px) {
+  .about__img:hover {
+    top: -7px;
+    left: -6px;
+  }
+}
+@media (max-width: 767px) {
+  .about__img:hover {
+    top: 0;
+    left: 0;
+    background: transparent;
+  }
+}
+.about__wrapper-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .about__wrapper-content {
+    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+    height: 83px;
+    flex-direction: row;
+    justify-content: flex-start;
+    top: auto;
+    bottom: 0;
+    padding: 26px 0px 26.54px 14px;
+  }
+}
+.about__img:hover .about__wrapper-content {
+  display: flex;
+}
+.about__wrapper-icon {
+  margin-bottom: 30px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .about__wrapper-icon {
+    margin-right: 32.54px;
+    width: 30.46px;
+    height: 30.46px;
+    margin-bottom: 0;
+  }
+}
+.about__icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about__text {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .about__text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+}
+
+.achievements {
+  background-color: #95E1D3;
+}
+
+.achievement {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .achievement {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.achievement__text {
+  flex: 1;
+  text-align: center;
+  padding: 64px 0px;
+  color: #fff;
+  border-right: 1px solid #fff;
+  box-sizing: border-box;
+}
+.achievement__text:first-child {
+  border-left: 1px solid #fff;
+}
+@media (max-width: 767px) {
+  .achievement__text:first-child {
+    border-left: none;
+  }
+}
+@media (max-width: 1024px) {
+  .achievement__text {
+    padding: 34px 0px 33, 56px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .achievement__text {
+    padding: 64px 0px;
+    width: 124.1px;
+    flex: 0 0 50%;
+    border: none;
+    border-bottom: 1px solid #fff;
+  }
+  .achievement__text:last-child {
+    border-bottom: none;
+  }
+}
+.achievement__description {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  display: block;
+  white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .achievement__description {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+}
+.achievement__number {
+  font-size: 64px;
+  line-height: 75px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .achievement__number {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=style.css.map */
