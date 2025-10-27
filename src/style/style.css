@@ -196,6 +196,7 @@ body {
   .review__heading {
     font-size: 18px;
     line-height: 21px;
+    font-weight: 700;
     margin-bottom: 7px;
   }
 }
@@ -216,6 +217,7 @@ body {
   .review__title {
     font-size: 14px;
     line-height: 16px;
+    font-weight: 400;
     margin-bottom: 62px;
   }
 }
@@ -256,5 +258,6 @@ body {
   .review__text {
     font-size: 14px;
     line-height: 16px;
+    font-weight: 400;
   }
 }/*# sourceMappingURL=style.css.map */

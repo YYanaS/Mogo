@@ -47,7 +47,7 @@ body {
 .reviews {
     margin-bottom: 102px;
     text-align: center;
-    color: #2D3033;
+    color: $sectionColor;
     padding: 60px 0 64px;
     background: center / cover no-repeat url("../media/reviews__bg.webp");
     position: relative;
@@ -86,16 +86,12 @@ body {
     }
 
     &__title {
-        font-size: 30px;
-        line-height: 44px;
-        font-weight: 400;
-        font-family: "Kaushan Script", cursive;
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
         margin-bottom: 37px;
 
         @media (max-width: $tablet) {
-            font-size: 24px;
-            line-height: 35px;
-            font-weight: 400;
+            @include font(24px, 35px, 400);
             margin-bottom: 22.25px;
         }
 
@@ -105,21 +101,17 @@ body {
     }
 
     &__heading {
-        font-size: 36px;
-        line-height: 42px;
-        font-weight: 900;
+        @include font(36px, 42px, 900);
         position: relative;
         text-transform: uppercase;
 
         @media (max-width: $tablet) {
-            font-size: 24px;
-            line-height: 28px;
-            font-weight: 900;
+            @include font(24px, 28px, 900);
         }
 
         &::before {
             content: "";
-            border-top: 4px solid #F38281;
+            border-top: 4px solid $lineColor;
             width: 170px;
             position: absolute;
             top: 100%;
@@ -205,15 +197,12 @@ body {
     }
 
     &__heading {
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: 700;
+        @include font(24px, 28px, 700);
         margin-bottom: 12px;
         text-transform: uppercase;
 
         @media (max-width: $tablet) {
-            font-size: 18px;
-            line-height: 21px;
+            @include font(18px, 21px, 700);
             margin-bottom: 7px;
         }
 
@@ -223,16 +212,13 @@ body {
     }
 
     &__title {
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: 400;
+        @include font(18px, 21px, 400);
         margin-bottom: 87px;
         text-transform: uppercase;
         position: relative;
 
         @media (max-width: $tablet) {
-            font-size: 14px;
-            line-height: 16px;
+            @include font(14px, 16px, 400);
             margin-bottom: 62px;
         }
 
@@ -242,7 +228,7 @@ body {
 
         &::before {
             content: "";
-            border-top: 4px solid #F38281;
+            border-top: 4px solid $lineColor;
             width: 70px;
             position: absolute;
             top: 100%;
@@ -264,13 +250,10 @@ body {
     }
 
     &__text {
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: 400;
+        @include font(18px, 21px, 400);
 
         @media (max-width: $mobile) {
-            font-size: 14px;
-            line-height: 16px;
+            @include font(14px, 16px, 400);
         }
     }
 }
