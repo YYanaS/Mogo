@@ -273,12 +273,12 @@ body {
     }
 
     &__heading-blogs {
-        @include font(24px, 28px, 400);
+        @include font(24px, 28px, 700);
         margin-bottom: 36px;
         text-transform: uppercase;
 
         @media (max-width: $tablet) {
-            @include font(18px, 21px, 400);
+            @include font(18px, 21px, 700);
             margin-bottom: 23.57px;
         }
 
@@ -378,12 +378,12 @@ body {
 
     &__heading-inst {
         margin-bottom: 36px;
-        @include font(24px, 28px, 400);
+        @include font(24px, 28px, 700);
         text-transform: uppercase;
 
         @media (max-width: $tablet) {
             margin-bottom: 23.57px;
-            @include font(18px, 21px, 400);
+            @include font(18px, 21px, 700);
         }
 
         @media (max-width: $mobile) {

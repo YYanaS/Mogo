@@ -274,7 +274,7 @@ body {
 .footer__heading-blogs {
   font-size: 24px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 700;
   margin-bottom: 36px;
   text-transform: uppercase;
 }
@@ -282,7 +282,7 @@ body {
   .footer__heading-blogs {
     font-size: 18px;
     line-height: 21px;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: 23.57px;
   }
 }
@@ -398,7 +398,7 @@ body {
   margin-bottom: 36px;
   font-size: 24px;
   line-height: 28px;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
 }
 @media (max-width: 1024px) {
@@ -406,7 +406,7 @@ body {
     margin-bottom: 23.57px;
     font-size: 18px;
     line-height: 21px;
-    font-weight: 400;
+    font-weight: 700;
   }
 }
 @media (max-width: 767px) {
