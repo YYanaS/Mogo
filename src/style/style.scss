@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$gradientColor: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
+$textHeaderColor: #fff;
+$textBannerColor: #fff;
+$lineBannerColor: #fff;
+$lineColor: #F38281;
+$buttonColor: #fff;
+$sectionColor: #2D3033;
+$descriptionColor: #000;
+$buttonBgColorHover: #fff;
+$textColorHover: #F4BF87;
+$buttonBgColorActive: #364b4c;
+$advantagesBgColor: #95E1D3;
+$socialmedBgColor: #F9EFCF;
+$sectionBgColor: #fff;
+$backgroundImage: url('../media/background__img.webp');
+
+$font-primary: "Raleway", sans-serif;
+$font-secondary: "Kaushan Script", cursive;
+$font-accent: "Montserrat", sans-serif;
+
+$tablet: 1024px;
+$mobile: 767px;
+
+@mixin font($fontSize, $lineHeight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+
+body {
+    font-family: $font-primary;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+}
+
+.options {
+    margin-bottom: 144px;
+    text-align: center;
+    color: #2D3033;
+
+    & {
+        margin-bottom: 87.97px;
+    }
+
+    & {
+        margin-bottom: 31px;
+    }
+
+    &__header {
+        margin-bottom: 80px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 70px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 46px;
+        }
+    }
+
+    &__title {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+        margin-bottom: 37px;
+
+        @media (max-width: 1024px) {
+            @include font(24px, 35px, 400);
+            margin-bottom: 36.83px;
+        }
+
+
+        @media (max-width: 767px) {
+            margin-bottom: 36px;
+        }
+
+    }
+
+    &__heading {
+        @include font(36px, 42px, 900);
+        position: relative;
+        text-transform: uppercase;
+        margin-bottom: 82px;
+
+        @media (max-width: 1024px) {
+            @include font(24px, 28px, 900);
+            margin-bottom: 75.17px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 58px;
+        }
+
+        &::before {
+            content: "";
+            border-top: 4px solid #F38281;
+            width: 170px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            display: inline-block;
+            transform: translateX(-50%) translateY(44px);
+
+            @media (max-width: 1024px) {
+                width: 148px;
+                transform: translateX(-50%) translateY(41.17px);
+            }
+
+            @media (max-width: 767px) {
+                width: 134px;
+                transform: translateX(-50%) translateY(41px);
+            }
+        }
+    }
+
+    .description {
+        @include font(18px, 21px, 400);
+
+        @media (max-width: 1024px) {
+            @include font(14px, 16px, 400);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 30px;
+
+        @media (max-width: 1024px) {
+            grid-gap: 0 20px;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 29px 0;
+        }
+    }
+
+    &__wrapper-img {
+        width: 570px;
+        aspect-ratio: 1 / 0.8474;
+        overflow: hidden;
+
+        @media (max-width: 1024px) {
+            width: 486px;
+            aspect-ratio: 1 / 0.8416;
+        }
+
+        @media (max-width: 767px) {
+            width: 100%;
+            aspect-ratio: 1 / 0.4931;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__wrapper-information {
+        display: flex;
+        flex-direction: column;
+        row-gap: 22px;
+
+        @media (max-width: 1024px) {
+            row-gap: 20px;
+        }
+
+        @media (max-width: 767px) {
+            column-gap: 19px;
+        }
+    }
+
+    &__information {
+        height: 163px;
+        overflow: auto;
+        padding: 18px 85px 19px 22px;
+        text-align: left;
+
+        @media (max-width: 1024px) {
+            &__information {
+                height: 96px;
+                padding: 21px 72.07px 21.2px 21.37px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            &__information {
+                height: 120px;
+                padding: 9px 77px 9px 21px;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            margin: 17px 24px;
+            background-color: #F5F5F5;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #95E1D3;
+        }
+    }
+
+    &__wrapper-card {
+        border: 1px solid #C6CBCD;
+    }
+}
+
+.option {
+    border: 1px solid #C6CBCD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 14px 25px 18px;
+
+    &:first-child {
+        border: none;
+        border-bottom: 1px solid #C6CBCD;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 21.2px 11.94px 21.2px 15.35px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 21.2px 9.94px 21.2px 15.35px;
+    }
+
+    &__wrapper-title {
+        display: flex;
+        column-gap: 25px;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            column-gap: 21.2px;
+        }
+    }
+
+    &__wrapper-icon {
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+            width: 35.61px;
+            height: 35.61px;
+        }
+    }
+
+    &__title {
+        @include font(24px, 28px, 700);
+        text-transform: uppercase;
+
+        @media (max-width: 1024px) {
+            @include font (18px, 21px, 700);
+        }
+
+        @media (max-width: 767px) {
+            @include font(14px, 16px, 700);
+        }
+    }
+
+    &__wrapper-badge {
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+
+        @media (max-width: 1024px) {
+            width: 35.81px;
+            height: 35.61px;
+        }
+    }
+
+    &__badge {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
