@@ -30,8 +30,8 @@ body {
 }
 .footer__grid {
   margin-bottom: 60px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 3.7fr 4.7fr 2.7fr;
   -moz-column-gap: 30px;
        column-gap: 30px;
   position: relative;
@@ -67,7 +67,6 @@ body {
   }
 }
 .footer__information {
-  max-width: 370px;
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -258,7 +257,6 @@ body {
   }
 }
 .footer__blogs {
-  max-width: 470px;
   width: 100%;
 }
 @media (max-width: 1024px) {
@@ -380,7 +378,6 @@ body {
   }
 }
 .footer__instagram {
-  max-width: 270px;
   width: 100%;
 }
 @media (max-width: 1024px) {

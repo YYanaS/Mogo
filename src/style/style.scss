@@ -58,8 +58,8 @@ body {
 
     &__grid {
         margin-bottom: 60px;
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 3.7fr 4.7fr 2.7fr;
         column-gap: 30px;
         position: relative;
 
@@ -92,7 +92,6 @@ body {
     }
 
     &__information {
-        max-width: 370px;
         width: 100%;
 
         @media (max-width: $tablet) {
@@ -259,7 +258,6 @@ body {
     }
 
     &__blogs {
-        max-width: 470px;
         width: 100%;
 
         @media (max-width: $tablet) {
@@ -363,7 +361,6 @@ body {
     }
 
     &__instagram {
-        max-width: 270px;
         width: 100%;
 
         @media (max-width: $tablet) {
