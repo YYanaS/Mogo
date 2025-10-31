@@ -46,7 +46,7 @@ body {
 .team {
     margin-bottom: 88px;
     text-align: center;
-    color: #2D3033;
+    color: $sectionColor;
 
     @media (max-width: 1024px) {
         margin-bottom: 58px;
@@ -69,16 +69,12 @@ body {
     }
 
     &__title {
-        font-size: 30px;
-        line-height: 44px;
-        font-weight: 400;
-        font-family: "Kaushan Script", cursive;
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
         margin-bottom: 37px;
 
         @media (max-width: 1024px) {
-            font-size: 24px;
-            line-height: 35px;
-            font-weight: 400;
+            @include font(24px, 35px, 400);
             margin-bottom: 36.75px;
         }
 
@@ -88,30 +84,24 @@ body {
     }
 
     &__heading {
-        font-size: 36px;
-        line-height: 42px;
-        font-weight: 900;
+        @include font(36px, 42px, 900);
         position: relative;
         text-transform: uppercase;
         margin-bottom: 82px;
 
         @media (max-width: 1024px) {
-            font-size: 24px;
-            line-height: 28px;
-            font-weight: 900;
+            @include font(24px, 28px, 900);
             margin-bottom: 73.93px;
         }
 
         @media (max-width: 767px) {
-            font-size: 24px;
-            line-height: 28px;
-            font-weight: 900;
+            @include font(24px, 28px, 900);
             margin-bottom: 58px;
         }
 
         &:before {
             content: "";
-            border-top: 4px solid #F38281;
+            border-top: 4px solid $lineColor;
             width: 170px;
             position: absolute;
             top: 100%;
@@ -132,14 +122,10 @@ body {
     }
 
     &__description {
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: 400;
+        @include font(18px, 21px, 400);
 
         @media (max-width: 1024px) {
-            font-size: 14px;
-            line-height: 16px;
-            font-weight: 400;
+            @include font(14px, 16px, 400);
         }
     }
 
@@ -259,7 +245,7 @@ body {
         }
 
         &:hover {
-            background-color: #F38281;
+            background-color: $lineColor;
         }
 
         &:hover .person__icon path {
@@ -274,30 +260,22 @@ body {
     }
 
     &__title {
+        @include font(24px, 28px, 700);
         margin-bottom: 31px;
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: 700;
         text-transform: uppercase;
 
         @media (max-width: 1024px) {
             margin-bottom: 14px;
-            font-size: 18px;
-            line-height: 21px;
-            font-weight: 700;
+            @include font(18px, 21px, 700);
         }
     }
 
     &__text {
-        font-size: 18px;
-        line-height: 21px;
-        font-weight: 400;
+        @include font(18px, 21px, 400);
         text-transform: uppercase;
 
         @media (max-width: 1024px) {
-            font-size: 14px;
-            line-height: 16px;
-            font-weight: 400;
+            @include font(14px, 16px, 400);
         }
     }
 }
