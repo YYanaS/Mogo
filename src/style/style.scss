@@ -144,21 +144,31 @@ body {
         }
     }
 
-    &__background {
-        width: 370px;
-        height: 338px;
-        background-color: $advantagesBgColor;
+    &__wrapper-content {
+        max-width: 370px;
+        aspect-ratio: 1/0.916;
         position: relative;
 
         @media (max-width: $tablet) {
-            width: 320.43px;
-            height: 282.71px;
+            max-width: 320.43px;
+            aspect-ratio: 1/0.8823;
         }
 
         @media (max-width: $mobile) {
-            width: 288px;
-            height: 258px;
-            background-image: url(../media/super_team_2.webp);
+            width: 100%;
+            aspect-ratio: 1/0.8958;
+        }
+
+        &:hover {
+            background-color: $advantagesBgColor;
+
+            @media (max-width: $mobile) {
+                background-color: transparent;
+            }
+        }
+
+        &:hover .about__content {
+            opacity: 1;
         }
     }
 
@@ -166,53 +176,39 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        background-image: url(../media/super_team_2.webp);
-        position: relative;
         transition: all 0.3s ease;
-
-        &:hover {
-            top: -16px;
-            left: -16px;
-            background: $gradientColor;
-
-            @media (max-width: $tablet) {
-                top: -7px;
-                left: -6px;
-            }
-
-            @media (max-width: $mobile) {
-                top: 0;
-                left: 0;
-                background: transparent;
-            }
-        }
+        position: relative;
+        z-index: -1;
     }
 
-    &__wrapper-content {
-        display: none;
+    &__content {
+        opacity: 0;
+        display: flex;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -16px;
+        left: -16px;
         width: 100%;
         height: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         z-index: 2;
+        background: $gradientColor;
+
+        @media (max-width: $tablet) {
+            top: -7px;
+            left: -6px;
+        }
 
         @media (max-width: $mobile) {
-            background: $gradientColor;
             height: 83px;
             flex-direction: row;
             justify-content: flex-start;
             top: auto;
+            left: 0;
             bottom: 0;
             padding: 26px 0px 26.54px 14px;
         }
-    }
-
-    &__img:hover &__wrapper-content {
-        display: flex;
     }
 
     &__wrapper-icon {
@@ -220,6 +216,12 @@ body {
         width: 40px;
         height: 40px;
         overflow: hidden;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 26.09px;
+            width: 33.46px;
+            height: 33.46px;
+        }
 
         @media (max-width: $mobile) {
             margin-right: 32.54px;
@@ -240,7 +242,7 @@ body {
         color: $buttonColor;
         text-transform: uppercase;
 
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             @include font(18px, 21px, 500);
         }
     }
@@ -265,7 +267,6 @@ body {
         padding: 64px 0px;
         color: $textBannerColor;
         border-right: 1px solid $lineBannerColor;
-        box-sizing: border-box;
 
         &:first-child {
             border-left: 1px solid $lineBannerColor;
@@ -276,12 +277,12 @@ body {
         }
 
         @media (max-width: $tablet) {
-            padding: 34px 0px 33, 56px 0px;
+            padding: 34px 0px 33.56px 0px;
         }
 
         @media (max-width: $mobile) {
             padding: 64px 0px;
-            width: 124.1px;
+            width: 50%;
             flex: 0 0 50%;
             border: none;
             border-bottom: 1px solid $lineBannerColor;
