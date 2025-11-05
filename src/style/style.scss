@@ -90,7 +90,6 @@ body {
 
         @media (max-width: $tablet) {
             @include font(24px, 28px, 900);
-            margin-bottom: 36.83px;
         }
 
         &:before {
@@ -144,6 +143,7 @@ body {
 
     @media (max-width: $mobile) {
         column-gap: 20px;
+        width: 100%;
     }
 
     &__wrapper-icon {
@@ -151,6 +151,9 @@ body {
         height: 70px;
         overflow: hidden;
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @media (max-width: $tablet) {
             width: 59.35px;
@@ -163,21 +166,16 @@ body {
         }
     }
 
-    &__icon {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     &__description {
-        max-width: 270px;
+       flex-grow: 1;
+       padding-top: 19px;
 
         @media (max-width: $tablet) {
-            max-width: 228.92px;
+            padding-top: 18px;
         }
 
         @media (max-width: $mobile) {
-            max-width: 211px;
+            width: 100%;;
         }
     }
 
@@ -192,7 +190,7 @@ body {
         }
 
         @media (max-width: $mobile) {
-            margin: 17px 0;
+            margin-bottom: 17px;
         }
     }
 
