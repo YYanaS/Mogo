@@ -12,6 +12,42 @@
     background: #222;
   }
 }
+@keyframes drawLine {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes imageShiftDesktop {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: -16px;
+    left: -16px;
+  }
+}
+@keyframes imageShiftTablet {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    top: -7px;
+    left: -6px;
+  }
+}
+@keyframes contentShift {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Raleway", sans-serif;
 }
@@ -240,6 +276,7 @@ body:has(.header__toggle:checked) {
   margin-bottom: 137px;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s linear;
 }
 @media (max-width: 1024px) {
   .welcome__btn {
@@ -264,6 +301,7 @@ body:has(.header__toggle:checked) {
 .welcome__btn:hover {
   background-color: #fff;
   color: #F4BF87;
+  transform: scale(1.1);
 }
 .welcome__btn:active {
   border: 4px solid #F4BF87;
@@ -402,6 +440,7 @@ body:has(.header__toggle:checked) {
   font-weight: 700;
   color: #fff;
   position: relative;
+  transition: all 0.3s linear;
 }
 .nav__link:hover {
   color: #F4BF87;
@@ -415,6 +454,7 @@ body:has(.header__toggle:checked) {
   left: 50%;
   display: inline-block;
   transform: translateY(5px) translateX(-50%);
+  animation: drawLine 0.3s linear;
 }
 .nav__list-icon {
   display: flex;
@@ -429,6 +469,9 @@ body:has(.header__toggle:checked) {
     -moz-column-gap: 23.74px;
          column-gap: 23.74px;
   }
+}
+.nav__icon path {
+  transition: all 0.3s linear;
 }
 .nav__icon:hover path {
   fill: #F4BF87;
@@ -625,6 +668,17 @@ body:has(.header__toggle:checked) {
 }
 .about__wrapper-content:hover .about__content {
   opacity: 1;
+  animation: imageShiftDesktop 0.3s linear;
+}
+@media (max-width: 1024px) {
+  .about__wrapper-content:hover .about__content {
+    animation: imageShiftTablet 0.3s linear;
+  }
+}
+@media (max-width: 767px) {
+  .about__wrapper-content:hover .about__content {
+    animation: none;
+  }
 }
 .about__img {
   width: 100%;
@@ -670,6 +724,7 @@ body:has(.header__toggle:checked) {
     padding: 26px 14px 26.54px;
     opacity: 1;
     gap: 0 32.54px;
+    animation: contentShift 1s linear;
   }
 }
 .about__wrapper-icon {

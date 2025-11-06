@@ -43,6 +43,50 @@ $mobile: 767px;
     }
 }
 
+@keyframes drawLine {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes imageShiftDesktop {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: -16px;
+        left: -16px
+    }
+}
+
+@keyframes imageShiftTablet {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: -7px;
+        left: -6px
+    }
+}
+
+@keyframes contentShift {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 body {
     font-family: $font-primary;
@@ -272,6 +316,7 @@ body {
         margin-bottom: 137px;
         color: $buttonColor;
         cursor: pointer;
+        transition: all 0.3s linear;
 
         @media (max-width: $tablet) {
             max-width: 318px;
@@ -290,6 +335,7 @@ body {
         &:hover {
             background-color: #fff;
             color: $textColorHover;
+            transform: scale(1.1);
         }
 
         &:active {
@@ -336,7 +382,7 @@ body {
         }
     }
 
-    &__btn-list_first{
+    &__btn-list_first {
         @media (max-width: $mobile) {
             border-top: 4px solid $lineColor;
         }
@@ -410,6 +456,7 @@ body {
         @include font(14px, 16px, 700);
         color: #fff;
         position: relative;
+        transition: all 0.3s linear;
 
         &:hover {
             color: $textColorHover;
@@ -423,6 +470,7 @@ body {
                 left: 50%;
                 display: inline-block;
                 transform: translateY(5px) translateX(-50%);
+                animation: drawLine 0.3s linear;
             }
         }
     }
@@ -437,6 +485,10 @@ body {
         @media (max-width: $tablet) {
             column-gap: 23.74px;
         }
+    }
+
+    &__icon path {
+        transition: all 0.3s linear;
     }
 
     &__icon:hover path {
@@ -612,6 +664,15 @@ body {
 
         &:hover .about__content {
             opacity: 1;
+            animation: imageShiftDesktop 0.3s linear;
+
+            @media (max-width: $tablet) {
+                animation: imageShiftTablet 0.3s linear;
+            }
+
+            @media (max-width: $mobile) {
+                animation: none;
+            }
         }
     }
 
@@ -656,6 +717,7 @@ body {
             padding: 26px 14px 26.54px;
             opacity: 1;
             gap: 0 32.54px;
+            animation: contentShift 1s linear;
 
         }
     }
