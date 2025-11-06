@@ -100,15 +100,17 @@ body {
 
         @media (max-width: $tablet) {
             margin-bottom: 22.25px;
+            @include font(24px,35px,400);
         }
 
         @media (max-width: $mobile) {
             margin-bottom: 39.24px;
+            @include font(30px,44px,400);
         }
     }
 
     &__heading {
-        @include font(36px, 42px, 900px);
+        @include font(36px, 42px, 900);
         position: relative;
         text-transform: uppercase;
 
@@ -125,11 +127,13 @@ body {
             @media (max-width: $tablet) {
                 width: 148px;
                 transform: translateX(-50%) translateY(30.27px);
+                @include font(24px, 28px, 900);
             }
 
             @media (max-width: $mobile) {
                 width: 134px;
                 transform: translateX(-50%) translateY(45.94px);
+                @include font(36px, 42px, 900);
             }
         }
     }
@@ -177,21 +181,20 @@ body {
         height: 411.66px;
         overflow: hidden;
         position: absolute;
-        left: 67%;
-        top: 59%;
+        bottom: -15%;
+        right: 15%;
         z-index: 2;
 
         @media (max-width: $tablet) {
             width: 135.55px;
             height: 279.17px;
-            top: 65%;
+            right: 20%;
         }
 
         @media (max-width: $mobile) {
             width: 85.12px;
             height: 175.31px;
-            left: 65%;
-            top: 70%;
+            right: 27%;
         }
     }
 

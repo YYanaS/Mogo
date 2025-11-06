@@ -78,17 +78,23 @@ body {
 @media (max-width: 1024px) {
   .design__title {
     margin-bottom: 22.25px;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 400;
   }
 }
 @media (max-width: 767px) {
   .design__title {
     margin-bottom: 39.24px;
+    font-size: 30px;
+    line-height: 44px;
+    font-weight: 400;
   }
 }
 .design__heading {
   font-size: 36px;
   line-height: 42px;
-  font-weight: 900px;
+  font-weight: 900;
   position: relative;
   text-transform: uppercase;
 }
@@ -106,12 +112,18 @@ body {
   .design__heading::before {
     width: 148px;
     transform: translateX(-50%) translateY(30.27px);
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
   }
 }
 @media (max-width: 767px) {
   .design__heading::before {
     width: 134px;
     transform: translateX(-50%) translateY(45.94px);
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 900;
   }
 }
 .design__wrapper-tablet {
@@ -156,23 +168,22 @@ body {
   height: 411.66px;
   overflow: hidden;
   position: absolute;
-  left: 67%;
-  top: 59%;
+  bottom: -15%;
+  right: 15%;
   z-index: 2;
 }
 @media (max-width: 1024px) {
   .design__wrapper-phone {
     width: 135.55px;
     height: 279.17px;
-    top: 65%;
+    right: 20%;
   }
 }
 @media (max-width: 767px) {
   .design__wrapper-phone {
     width: 85.12px;
     height: 175.31px;
-    left: 65%;
-    top: 70%;
+    right: 27%;
   }
 }
 .design__phone {
