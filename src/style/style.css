@@ -58,7 +58,7 @@ body {
     margin-bottom: 59px;
   }
 }
-.reviews__title {
+.reviews__text {
   font-size: 30px;
   line-height: 44px;
   font-weight: 400;
@@ -66,7 +66,7 @@ body {
   margin-bottom: 37px;
 }
 @media (max-width: 1024px) {
-  .reviews__title {
+  .reviews__text {
     font-size: 24px;
     line-height: 35px;
     font-weight: 400;
@@ -74,7 +74,7 @@ body {
   }
 }
 @media (max-width: 767px) {
-  .reviews__title {
+  .reviews__text {
     margin-bottom: 23px;
   }
 }
@@ -127,7 +127,7 @@ body {
 @media (max-width: 767px) {
   .reviews__grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 0 40px;
+    grid-gap: 40px;
     justify-items: center;
   }
 }
@@ -162,8 +162,7 @@ body {
   .review__wrapper-icon {
     width: 88.16px;
     height: 88.16px;
-    margin: 0 auto;
-    margin-bottom: 28.84px;
+    margin: 0 auto 28.84px;
   }
 }
 .review__icon {
@@ -173,19 +172,9 @@ body {
      object-fit: cover;
 }
 .review__description {
-  max-width: 369px;
+  flex-grow: 1;
 }
-@media (max-width: 1024px) {
-  .review__description {
-    max-width: 316px;
-  }
-}
-@media (max-width: 767px) {
-  .review__description {
-    max-width: 286px;
-  }
-}
-.review__heading {
+.review__person {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -193,7 +182,7 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 1024px) {
-  .review__heading {
+  .review__person {
     font-size: 18px;
     line-height: 21px;
     font-weight: 700;
@@ -201,11 +190,11 @@ body {
   }
 }
 @media (max-width: 767px) {
-  .review__heading {
+  .review__person {
     margin-bottom: 7px;
   }
 }
-.review__title {
+.review__position {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
@@ -214,7 +203,7 @@ body {
   position: relative;
 }
 @media (max-width: 1024px) {
-  .review__title {
+  .review__position {
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
@@ -222,11 +211,11 @@ body {
   }
 }
 @media (max-width: 767px) {
-  .review__title {
+  .review__position {
     margin-bottom: 54px;
   }
 }
-.review__title::before {
+.review__position::before {
   content: "";
   border-top: 4px solid #F38281;
   width: 70px;
@@ -237,13 +226,13 @@ body {
   transform: translateY(32px);
 }
 @media (max-width: 1024px) {
-  .review__title::before {
+  .review__position::before {
     width: 47.47px;
     transform: translateY(21.27px);
   }
 }
 @media (max-width: 767px) {
-  .review__title::before {
+  .review__position::before {
     width: 134px;
     left: 50%;
     transform: translateX(-50%) translateY(21px);
