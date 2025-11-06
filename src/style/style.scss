@@ -69,7 +69,7 @@ body {
         }
     }
 
-    &__title {
+    &__text {
         @include font(30px, 44px, 400);
         font-family: $font-secondary;
         margin-bottom: 37px;
@@ -132,14 +132,11 @@ body {
 }
 
 .article {
-    position: relative;
-    max-width: 370px;
-    width: 100%;
 
     &__wrapper-img {
-        width: 100%;
-        overflow: hidden;
+        aspect-ratio: 370/253;
         margin-bottom: 36px;
+        position: relative;
 
         @media (max-width: $tablet) {
             margin-bottom: 33px;
@@ -238,8 +235,8 @@ body {
         background-color: #95E1D3;
         color: #fff;
         position: absolute;
-        top: 148px;
-        left: -14px;
+        bottom: 9.88%;
+        left: -3.78%;
         width: 80px;
         text-align: center;
         text-transform: uppercase;
@@ -247,8 +244,8 @@ body {
         @media (max-width: $tablet) {
             @include font(14px, 20px, 500);
             padding: 11px 20.86px 12.86px 20px;
-            top: 125.1px;
-            left: -8.36px;
+            bottom: 9.827%;
+            left: -2.96%;
             width: 67.86px;
         }
 
