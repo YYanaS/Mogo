@@ -779,6 +779,7 @@ body:has(.header__toggle:checked) {
 
 .achievement {
   display: flex;
+  margin-bottom: 65px;
 }
 @media (max-width: 767px) {
   .achievement {

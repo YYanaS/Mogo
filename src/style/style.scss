@@ -770,6 +770,7 @@ body {
 
 .achievement {
     display: flex;
+    margin-bottom: 65px;
 
     @media (max-width: $mobile) {
         flex-wrap: wrap;
