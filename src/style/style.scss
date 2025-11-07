@@ -14,6 +14,7 @@ $sectionColor: #2D3033;
 $descriptionColor: #000;
 $buttonBgColorHover: #fff;
 $textColorHover: #F4BF87;
+$textFbColor: #A9AFB1;
 $buttonBgColorActive: #364b4c;
 $advantagesBgColor: #95E1D3;
 $socialmedBgColor: #F9EFCF;
@@ -392,49 +393,49 @@ body {
     }
 }
 
-.swiper-pagination-bullet {
-    background: $buttonColor;
-    cursor: pointer;
-    max-width: 270px;
-    width: 100%;
-    height: 4px;
-    border-radius: 0px;
-    opacity: 1;
-
-    @media (max-width: $tablet) {
-        padding: 15px 0;
-        max-width: 233px;
-    }
-
-    @media (max-width: $mobile) {
-        min-width: 57px;
-        padding: 0;
-    }
-}
-
-.swiper-pagination-bullet-active {
-    position: relative;
-
-    &::after {
-        content: '';
-        border-top: 4px solid $lineColor;
-        width: 70px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: inline-block;
+.banner {
+    .swiper-pagination-bullet {
+        background: $buttonColor;
+        cursor: pointer;
+        max-width: 270px;
+        width: 100%;
+        height: 4px;
+        border-radius: 0px;
+        opacity: 1;
 
         @media (max-width: $tablet) {
-            width: 64px;
+            padding: 15px 0;
+            max-width: 233px;
         }
 
         @media (max-width: $mobile) {
-            width: 0;
+            min-width: 57px;
+            padding: 0;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        position: relative;
+
+        &::after {
+            content: '';
+            border-top: 4px solid $lineColor;
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+
+            @media (max-width: $tablet) {
+                width: 64px;
+            }
+
+            @media (max-width: $mobile) {
+                width: 0;
+            }
         }
     }
 }
-
-
 
 .nav {
     display: flex;
@@ -994,6 +995,92 @@ body {
 
         @media (max-width: $tablet) {
             @include font(14px, 16px, 400);
+        }
+    }
+}
+
+.feedbacks {
+    background-color: #F8F8F8;
+    padding: 42px 0;
+
+    @media (max-width: $tablet) {
+        padding: 28px 0;
+    }
+}
+
+.feedback {
+    display: flex;
+    column-gap: 30px;
+    padding: 0 100px;
+
+    @media (max-width: $tablet) {
+        padding: 0 84px 0 100px;
+    }
+
+    &__wrapper-icon {
+        aspect-ratio: 1 / 1;
+        width: 170px;
+        flex-shrink: 0;
+        border: 2px solid #95E1D3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $tablet) {
+            width: 115.28px;
+        }
+    }
+
+    &__text {
+        @include font(24px, 28px, 500);
+        font-style: italic;
+        margin-bottom: 31px;
+        color: $textFbColor;
+
+        @media (max-width: $tablet) {
+            @include font(18px, 21px, 500);
+            margin-bottom: 16px;
+        }
+    }
+
+    &__wrapper-author {
+        display: flex;
+        column-gap: 56px;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            column-gap: 37.8px;
+        }
+    }
+
+    &__line {
+        width: 70px;
+        height: 4px;
+        background-color: $lineColor;
+
+        @media (max-width: $tablet) {
+            width: 47.47px;
+        }
+    }
+
+    &__author {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+
+        @media (max-width: $tablet) {
+            @include font(24px, 35px, 400);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        aspect-ratio: 1/1;
+
+        @media (max-width: $tablet) {
+            width: 28.48px;
         }
     }
 }
