@@ -179,21 +179,42 @@ body:has(.header__toggle:checked) {
   }
 }
 
+.banner {
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .banner {
+    padding: 42px;
+  }
+}
+
 .welcome {
   min-height: 100vh;
-  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img.webp");
+  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 122px 0 22px;
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
 }
-@media (max-width: 767px) {
-  .welcome {
-    padding: 42px;
-  }
+.welcome-second {
+  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img2.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.welcome-third {
+  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img3.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.welcome-fourth {
+  background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img4.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .welcome__container {
   text-align: center;
@@ -314,82 +335,46 @@ body:has(.header__toggle:checked) {
 .welcome__btn:active {
   border: 4px solid #F4BF87;
 }
-.welcome__list {
-  display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
-  list-style-type: none;
-  justify-content: space-between;
+.welcome__pagination {
+  margin-bottom: 85px;
 }
 @media (max-width: 1024px) {
-  .welcome__list {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+  .welcome__pagination {
+    margin-bottom: 57.48px;
   }
 }
-.welcome__btn-list {
-  background-color: transparent;
-  border: none;
-  border-top: 4px solid #fff;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 500;
+@media (max-width: 767px) {
+  .welcome__pagination {
+    margin-bottom: 42px;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
   cursor: pointer;
   max-width: 270px;
   width: 100%;
-  color: #fff;
-  padding: 21px 0;
-  text-align: left;
+  height: 4px;
+  border-radius: 0px;
+  opacity: 1;
 }
 @media (max-width: 1024px) {
-  .welcome__btn-list {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
+  .swiper-pagination-bullet {
     padding: 15px 0;
     max-width: 233px;
   }
 }
 @media (max-width: 767px) {
-  .welcome__btn-list {
-    font-size: 0px;
-    line-height: 0px;
-    font-weight: 0;
+  .swiper-pagination-bullet {
     min-width: 57px;
     padding: 0;
   }
 }
-@media (max-width: 767px) {
-  .welcome__btn-list_first {
-    border-top: 4px solid #F38281;
-  }
-}
-.welcome__number {
-  font-size: 36px;
-  line-height: 42px;
-  font-weight: 700;
-}
-@media (max-width: 1024px) {
-  .welcome__number {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-}
-@media (max-width: 767px) {
-  .welcome__number {
-    font-size: 0px;
-    line-height: 0px;
-    font-weight: 0;
-  }
-}
-.welcome__item {
+
+.swiper-pagination-bullet-active {
   position: relative;
-  width: 100%;
 }
-.welcome__item:first-of-type::after {
+.swiper-pagination-bullet-active::after {
   content: "";
   border-top: 4px solid #F38281;
   width: 70px;
@@ -399,12 +384,12 @@ body:has(.header__toggle:checked) {
   display: inline-block;
 }
 @media (max-width: 1024px) {
-  .welcome__item:first-of-type::after {
+  .swiper-pagination-bullet-active::after {
     width: 64px;
   }
 }
 @media (max-width: 767px) {
-  .welcome__item:first-of-type::after {
+  .swiper-pagination-bullet-active::after {
     width: 0;
   }
 }
@@ -496,7 +481,7 @@ body:has(.header__toggle:checked) {
     left: -100%;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img.webp");
+    background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%), url("../media/background__img1.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,6 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>mogo</title>
 </head>
+
 <body>
   <header class="header">
     <div class="container header__container">
@@ -124,40 +127,48 @@
       <div class="header__burger-overlay"></div>
     </div>
   </header>
-  <section class="welcome">
-    <div class="container welcome__container">
-      <p class="welcome__title">Creative Template</h3>
-      <h1 class="welcome__heading">Welcome to MoGo</h1>
-      <button class="welcome__btn">learn more</button>
-      <nav class="welcome__nav">
-        <ul class="welcome__list">
-          <li class="welcome__item">
-            <button class="welcome__btn-list welcome__btn-list_first">
-              <span class="welcome__number">01</span>
-              intro
-            </button>
-          </li>
-          <li class="welcome__item">
-            <button class="welcome__btn-list">
-              <span class="welcome__number">02</span>
-              works
-            </button>
-          </li>
-          <li class="welcome__item">
-            <button class="welcome__btn-list">
-              <span class="welcome__number">03</span>
-              about
-            </button>
-          </li>
-          <li class="welcome__item">
-            <button class="welcome__btn-list">
-              <span class="welcome__number">04</span>
-              contacts
-            </button>
-          </li>
-        </ul>
-      </nav>
+  <div class="swiper banner">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="welcome">
+          <div class="container welcome__container">
+            <p class="welcome__title">Creative Template</h3>
+            <h1 class="welcome__heading">Welcome to MoGo</h1>
+            <button class="welcome__btn">learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="welcome welcome-second">
+          <div class="container welcome__container">
+            <p class="welcome__title">Creative Template</h3>
+            <h1 class="welcome__heading">Welcome to MoGo</h1>
+            <button class="welcome__btn">learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="welcome welcome-third">
+          <div class="container welcome__container">
+            <p class="welcome__title">Creative Template</h3>
+            <h1 class="welcome__heading">Welcome to MoGo</h1>
+            <button class="welcome__btn">learn more</button>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="welcome welcome-fourth">
+          <div class="container welcome__container">
+            <p class="welcome__title">Creative Template</h3>
+            <h1 class="welcome__heading">Welcome to MoGo</h1>
+            <button class="welcome__btn">learn more</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="swiper-pagination welcome__pagination">
+    </div>
+  </div>
   </section>
   <section id="about" class="about">
     <div class="container">
@@ -418,6 +429,14 @@
       </div>
     </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".banner", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
 </body>
 
 </html>
