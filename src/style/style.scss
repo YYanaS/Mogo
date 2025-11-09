@@ -33,6 +33,30 @@ $mobile: 767px;
     font-weight: $fontWeight;
 }
 
+@keyframes contentShiftDesktop {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: -16px;
+        left: -16px
+    }
+}
+
+@keyframes contentShiftTablet {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: -4.81px;
+        left: -3.3px;
+    }
+}
+
 body {
     font-family: $font-primary;
 }
@@ -200,6 +224,7 @@ body {
             opacity: 1;
             display: flex;
             column-gap: 1px;
+
         }
 
         &:hover::before {
@@ -211,36 +236,41 @@ body {
             height: 100%;
             background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
             z-index: 1;
+            animation: contentShiftDesktop 0.3s linear;
+            
 
-            @media (max-width: 1024px) {
+            @media (max-width: $tablet) {
+                animation: contentShiftTablet 0.3s linear;
                 top: -4.81px;
                 left: -3.3px;
             }
 
-            @media (max-width: 767px) {
+            @media (max-width: $mobile) {
                 background: transparent;
                 top: 0;
                 left: 0;
+                animation: none;
             }
         }
     }
 
     &__wrapper-icon {
         width: 42px;
-        height: 42px;
+        aspect-ratio: 1/1;
         overflow: hidden;
         background-color: #F9EFCF;
         padding: 5.25px 2.7px;
+        transition: all 0.3s linear;
 
         @media (max-width: 1024px) {
             width: 35.57px;
-            height: 35.57px;
+            aspect-ratio: 1/1;
             padding: 4.45px 2.28px;
         }
 
         @media (max-width: 767px) {
             width: 42px;
-            height: 42px;
+            aspect-ratio: 1/1;
             overflow: hidden;
             background-color: #F9EFCF;
             padding: 5.25px 2.7px;
@@ -309,14 +339,14 @@ body {
 
     &__wrapper-icon {
         width: 127.12px;
-        height: 127.12px;
+        aspect-ratio: 1/1;
         display: flex;
         align-items: center;
         justify-content: center;
 
         @media (max-width: 1024px) {
             width: 86.21px;
-            height: 86.21px;
+            aspect-ratio: 1/1;
         }
     }
 
@@ -338,6 +368,16 @@ body {
         @media (max-width: 767px) {
             grid-column: 2/3;
             grid-row: 3/4;
+        }
+    }
+
+    &__wrapper-icon{
+        &:hover .partners__icon path {
+            fill: #95E1D3;
+        }
+
+        .partners__icon{
+            transition: all 0.3s linear;
         }
     }
 }
