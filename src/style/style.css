@@ -20,11 +20,15 @@ body {
   text-align: center;
   color: #2D3033;
 }
-.options {
-  margin-bottom: 87.97px;
+@media (max-width: 1024px) {
+  .options {
+    margin-bottom: 87.97px;
+  }
 }
-.options {
-  margin-bottom: 31px;
+@media (max-width: 767px) {
+  .options {
+    margin-bottom: 31px;
+  }
 }
 .options__header {
   margin-bottom: 80px;
@@ -176,13 +180,13 @@ body {
   text-align: left;
 }
 @media (max-width: 1024px) {
-  .options__information__information {
+  .options__information {
     height: 96px;
     padding: 21px 72.07px 21.2px 21.37px;
   }
 }
 @media (max-width: 767px) {
-  .options__information__information {
+  .options__information {
     height: 120px;
     padding: 9px 77px 9px 21px;
   }
