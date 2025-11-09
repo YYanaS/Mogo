@@ -71,8 +71,9 @@ body {
         @media (max-width: $mobile) {
             margin-bottom: 40px;
             row-gap: 23.77px;
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: 1fr;
+            justify-items: center;
+
         }
 
         &::before {
@@ -106,12 +107,17 @@ body {
 
     &__wrapper-logo {
         width: 140.96px;
-        aspect-ratio: 3.7;
-        overflow: hidden;
+        aspect-ratio: 140.96/38;
         margin-bottom: 44px;
+        
+
+        &:hover .footer__logo path{
+            fill: #95E1D3;
+        }
 
         @media (max-width: $tablet) {
             width: 95.4px;
+            aspect-ratio: 95.4/25.72;
             margin-bottom: 32.49px;
         }
 
@@ -123,7 +129,7 @@ body {
     &__logo {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        transition: all 0.3s linear;
     }
 
     &__description {
@@ -234,26 +240,35 @@ body {
         align-items: center;
         justify-content: center;
         width: 24px;
-        height: 24px;
+        aspect-ratio: 1/1;
         overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            filter: brightness(1.1);
+
+            .footer__icon {
+                fill: #95E1D3;
+            }
+        }
 
         @media (max-width: $tablet) {
             width: 16.24px;
-            height: 16.24px;
         }
     }
 
     &__icon {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        transition: transform 0.3s ease, fill 0.3s ease;
     }
 
     &__date-news {
         @include font(13px, 15px, 400);
 
         @media (max-width: $mobile) {
-            @include font(1px, 15px, 400);
+            @include font(12px, 15px, 400);
         }
     }
 
@@ -303,6 +318,13 @@ body {
     &__news {
         display: flex;
         column-gap: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            filter: brightness(1.1);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
 
         @media (max-width: $tablet) {
             column-gap: 19.94px;
@@ -315,18 +337,18 @@ body {
 
     &__wrapper-img {
         width: 170px;
-        height: 105px;
+        aspect-ratio: 170/105;
         overflow: hidden;
         flex-shrink: 0;
 
         @media (max-width: $tablet) {
             width: 115.06px;
-            height: 71.07px;
+            aspect-ratio: 115.06/71.07;
         }
 
         @media (max-width: $mobile) {
             width: 83px;
-            height: 71px;
+            aspect-ratio: 83/71;
         }
     }
 
@@ -350,29 +372,6 @@ body {
         }
     }
 
-    &__date-news {
-        @include font(13px, 15px, 400);
-        font-size: 13px;
-        line-height: 15px;
-
-        @media (max-width: $tablet) {
-            @include font(12px, 14px, 400);
-        }
-    }
-
-    &__instagram {
-        width: 100%;
-
-        @media (max-width: $tablet) {
-            max-width: 233px;
-        }
-
-        @media (max-width: $mobile) {
-            width: 100%;
-            max-width: 298px;
-        }
-    }
-
     &__heading-inst {
         margin-bottom: 36px;
         @include font(24px, 28px, 700);
@@ -389,7 +388,7 @@ body {
         }
     }
 
-    &_grid-instagram-posts {
+    &__grid-instagram-posts {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0;
@@ -406,17 +405,24 @@ body {
 
     &__wrapper-instagram-post {
         width: 90px;
-        height: 88px;
+        aspect-ratio: 90/88;
         overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+            filter: brightness(1.1);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
 
         @media (max-width: $tablet) {
             width: 78px;
-            height: 76px;
+            aspect-ratio: 78/76;
         }
 
         @media (max-width: $mobile) {
             width: 95.51px;
-            height: 94.27px;
+            aspect-ratio: 95.51/94.27;
         }
     }
 
