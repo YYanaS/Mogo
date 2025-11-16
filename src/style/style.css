@@ -29,16 +29,16 @@ body {
     margin-bottom: 58px;
   }
 }
-.gallery__header {
+.gallery__container {
   margin-bottom: 80px;
 }
 @media (max-width: 1024px) {
-  .gallery__header {
+  .gallery__container {
     margin-bottom: 52.5px;
   }
 }
 @media (max-width: 767px) {
-  .gallery__header {
+  .gallery__container {
     margin-bottom: 17px;
   }
 }
