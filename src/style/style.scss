@@ -165,7 +165,6 @@ body {
         @media (max-width: 767px) {
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 31px 0;
-            justify-items: center;
         }
     }
 
@@ -237,7 +236,7 @@ body {
             background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%);
             z-index: 1;
             animation: contentShiftDesktop 0.3s linear;
-            
+
 
             @media (max-width: $tablet) {
                 animation: contentShiftTablet 0.3s linear;
@@ -343,6 +342,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto;
 
         @media (max-width: 1024px) {
             width: 86.21px;
@@ -371,12 +371,12 @@ body {
         }
     }
 
-    &__wrapper-icon{
+    &__wrapper-icon {
         &:hover .partners__icon path {
             fill: #95E1D3;
         }
 
-        .partners__icon{
+        .partners__icon {
             transition: all 0.3s linear;
         }
     }
