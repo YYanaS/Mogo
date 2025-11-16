@@ -135,14 +135,14 @@ body {
   }
 }
 .options__wrapper-img {
-  width: 570px;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 1/0.8474;
   overflow: hidden;
 }
 @media (max-width: 1024px) {
   .options__wrapper-img {
-    width: 486px;
-    aspect-ratio: 1/0.8416;
+    aspect-ratio: auto;
   }
 }
 @media (max-width: 767px) {
