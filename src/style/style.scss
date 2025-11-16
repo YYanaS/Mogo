@@ -57,51 +57,29 @@ body {
     }
 
     &__grid {
-        margin-bottom: 60px;
+        margin-bottom: 18px;
+        padding-bottom: 42px;
+        border-bottom: 1px solid #C6CBCD;
         display: grid;
         grid-template-columns: 3.7fr 4.7fr 2.7fr;
         column-gap: 30px;
         position: relative;
 
         @media (max-width: $tablet) {
-            margin-bottom: 66.62px;
+            margin-bottom: 15px;
             column-gap: 20px;
         }
 
+        @media (max-width: 863px) {
+           grid-template-columns: 0.8fr 1fr 0.7fr;
+        }
+
         @media (max-width: $mobile) {
-            margin-bottom: 40px;
+            margin-bottom: 7px;
+            padding-bottom: 33px;
             row-gap: 23.77px;
             grid-template-columns: 1fr;
-            justify-items: center;
 
-        }
-
-        &::before {
-            content: "";
-            border-top: 1px solid #C6CBCD;
-            width: 100%;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: inline-block;
-            transform: translateY(42px);
-
-            @media (max-width: $mobile) {
-                transform: translateY(33px);
-            }
-        }
-    }
-
-    &__information {
-        width: 100%;
-
-        @media (max-width: $tablet) {
-            max-width: 317px;
-            width: 100%;
-        }
-
-        @media (max-width: $mobile) {
-            width: 100%;
         }
     }
 
@@ -109,9 +87,9 @@ body {
         width: 140.96px;
         aspect-ratio: 140.96/38;
         margin-bottom: 44px;
-        
 
-        &:hover .footer__logo path{
+
+        &:hover .footer__logo path {
             fill: #95E1D3;
         }
 
@@ -150,38 +128,22 @@ body {
 
     &__followers {
         @include font(18px, 30px, 400);
-        margin-bottom: 39px;
+        margin-bottom: 14px;
         position: relative;
         text-transform: uppercase;
         font-style: italic;
+        border-bottom: 1px solid #C6CBCD;
+        padding-bottom: 25px;
 
         @media (max-width: $tablet) {
             @include font(14px, 30px, 400);
-            margin-bottom: 19.14px;
+            margin-bottom: 7px;
+            padding-bottom: 12.14px;
         }
 
         @media (max-width: $mobile) {
-            margin-bottom: 19.35px;
+            padding-bottom: 13px;
             text-align: center;
-        }
-
-        &::before {
-            content: "";
-            border-top: 1px solid #C6CBCD;
-            width: 100%;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: inline-block;
-            transform: translateY(25px);
-
-            @media (max-width: $tablet) {
-                transform: translateY(12.14px);
-            }
-
-            @media (max-width: $mobile) {
-                transform: translateY(13px);
-            }
         }
     }
 
@@ -269,19 +231,6 @@ body {
 
         @media (max-width: $mobile) {
             @include font(12px, 15px, 400);
-        }
-    }
-
-    &__blogs {
-        width: 100%;
-
-        @media (max-width: $tablet) {
-            max-width: 402px;
-        }
-
-
-        @media (max-width: $mobile) {
-            width: 100%;
         }
     }
 
@@ -421,7 +370,7 @@ body {
         }
 
         @media (max-width: $mobile) {
-            width: 95.51px;
+            width: 100%;
             aspect-ratio: 95.51/94.27;
         }
     }
@@ -445,6 +394,14 @@ body {
             text-align: center;
             display: block;
         }
+
+        &:hover {
+            color: #87D2C4;
+        }
+
+        &:active {
+            color: #5C958A;
+        }
     }
 
     &__copyright {
@@ -464,6 +421,11 @@ body {
 
 .form {
     display: flex;
+
+    @media (max-width: 863px) {
+        flex-wrap: wrap;
+        row-gap: 18px;
+    }
 
     @media (max-width: $mobile) {
         display: block;
@@ -488,12 +450,15 @@ body {
             @include font(14px, 16px, 400);
         }
 
-        @media (max-width: $mobile) {
+        @media (max-width: 863px) {
             border: 1px solid #C6CBCD;
+            max-width: 100%;
+        }
+
+        @media (max-width: $mobile) {
             text-align: left;
             padding: 10px 27.23px 11.25px;
             @include font(14px, 16px, 400);
-            max-width: 100%;
             margin-bottom: 24.05px;
         }
 
@@ -524,6 +489,10 @@ body {
             max-width: 46.37%;
             width: 100%;
             @include font(14px, 16px, 700);
+        }
+
+        @media (max-width: 863px) {
+            max-width: 100%;
         }
 
         @media (max-width: $mobile) {
