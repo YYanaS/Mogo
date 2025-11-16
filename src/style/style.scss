@@ -1125,7 +1125,7 @@ body {
         @media (max-width: $tablet) {
             width: 88.16px;
             height: 88.16px;
-            margin: 0 auto 28.84px; 
+            margin: 0 auto 28.84px;
         }
     }
 
@@ -1136,7 +1136,7 @@ body {
     }
 
     &__description {
-        flex-grow:1;
+        flex-grow: 1;
     }
 
     &__person {
@@ -1198,5 +1198,180 @@ body {
         @media (max-width: $mobile) {
             @include font(14px, 16px, 400);
         }
+    }
+}
+
+.design {
+    margin-bottom: 60px;
+    text-align: center;
+    color: $buttonBgColorActive;
+    background: center / cover no-repeat url("../media/design__bg.webp");
+    position: relative;
+    padding: 60px 0 53px;
+    z-index: -2;
+
+    @media (max-width: $tablet) {
+        padding: 38.48px 0 38.85px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 62.18px 0 25px;
+    }
+
+    &::before {
+        background-color: rgba(255, 255, 255, 0.8);
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -2;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 102.37px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 69px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 103px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 77.22px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 82.58px;
+        }
+    }
+
+    &__title {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+        margin-bottom: 37px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 22.25px;
+            @include font(24px, 35px, 400);
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 39.24px;
+            @include font(30px, 44px, 400);
+        }
+    }
+
+    &__heading {
+        @include font(36px, 42px, 900);
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+            content: "";
+            border-top: 4px solid $lineColor;
+            width: 170px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            display: inline-block;
+            transform: translateX(-50%) translateY(44px);
+
+            @media (max-width: $tablet) {
+                width: 148px;
+                transform: translateX(-50%) translateY(30.27px);
+                @include font(24px, 28px, 900);
+            }
+
+            @media (max-width: $mobile) {
+                width: 134px;
+                transform: translateX(-50%) translateY(45.94px);
+                @include font(36px, 42px, 900);
+            }
+        }
+    }
+
+    &__wrapper-tablet {
+        width: 690px;
+        height: 529px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+
+        @media (max-width: $tablet) {
+            width: 464px;
+            height: 356px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 286px;
+            height: 219px;
+        }
+    }
+
+    &__tablet {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    &__wrapper-tablet::before {
+        content: "";
+        background: url("../media/design__img.webp") center/contain no-repeat;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &__wrapper-phone {
+        width: 199.89px;
+        height: 411.66px;
+        overflow: hidden;
+        position: absolute;
+        bottom: -15%;
+        right: 15%;
+        z-index: 2;
+
+        @media (max-width: $tablet) {
+            width: 135.55px;
+            height: 279.17px;
+            right: 20%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 85.12px;
+            height: 175.31px;
+            right: 27%;
+        }
+    }
+
+    &__phone {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    &__wrapper-phone::before {
+        content: "";
+        background: url("../media/design__img2.webp") center/contain no-repeat;
+        width: 100%;
+        height: 95%;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
     }
 }
