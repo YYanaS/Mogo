@@ -36,11 +36,14 @@
   }
 }
 @keyframes header-bg {
-  from {
+  0% {
     background: transparent;
   }
-  to {
-    background: #222;
+  8% {
+    background: #2D3033;
+  }
+  100% {
+    background: #2D3033;
   }
 }
 @keyframes drawLine {
@@ -1127,6 +1130,9 @@ body:has(.header__toggle:checked) {
     padding: 38px 0 29px;
   }
 }
+.reviews__container {
+  position: relative;
+}
 .reviews__header {
   margin-bottom: 98px;
 }
@@ -1524,7 +1530,6 @@ body:has(.header__toggle:checked) {
 }
 
 .feedbacks {
-  background-color: #F8F8F8;
   padding: 42px 0;
   margin-bottom: 84px;
 }
@@ -1704,15 +1709,18 @@ body:has(.header__toggle:checked) {
 .comments {
   background-color: #F8F8F8;
   padding: 42px 0;
+  margin-bottom: 102px;
 }
 @media (max-width: 1024px) {
   .comments {
     padding: 28px 0;
+    margin-bottom: 73.75px;
   }
 }
 @media (max-width: 767px) {
   .comments {
     padding: 35px 0 28.51px;
+    margin-bottom: 46px;
   }
 }
 
@@ -2119,7 +2127,6 @@ body:has(.header__toggle:checked) {
 }
 
 .location {
-  margin-bottom: 76px;
   text-align: center;
   color: #F38281;
   padding: 42px 0 86px;
@@ -2128,13 +2135,11 @@ body:has(.header__toggle:checked) {
 }
 @media (max-width: 1024px) {
   .location {
-    margin-bottom: 53.14px;
     padding: 28.48px 0 59px;
   }
 }
 @media (max-width: 767px) {
   .location {
-    margin-bottom: 52.37px;
     padding: 42px 0 93px;
   }
 }
@@ -2758,15 +2763,18 @@ body:has(.header__toggle:checked) {
 .partners {
   background-color: #F8F8F8;
   padding: 62px 0 66px;
+  margin-bottom: 102px;
 }
 @media (max-width: 1024px) {
   .partners {
     padding: 28.48px 0 28.4px;
+    margin-bottom: 73.75px;
   }
 }
 @media (max-width: 767px) {
   .partners {
     padding: 30px 0 21.79px;
+    margin-bottom: 46px;
   }
 }
 .partners__container {
