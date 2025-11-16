@@ -995,3 +995,208 @@ body {
         }
     }
 }
+
+.reviews {
+    margin-bottom: 102px;
+    text-align: center;
+    color: $sectionColor;
+    padding: 60px 0 64px;
+    background: center / cover no-repeat url("../media/reviews__bg.webp");
+    position: relative;
+
+    &::before {
+        background-color: rgba(255, 255, 255, 0.9);
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    @media (max-width: $tablet) {
+        margin-bottom: 74.07px;
+        padding: 38.48px 0 47.93px;
+    }
+
+    @media (max-width: $mobile) {
+        margin-bottom: 46px;
+        padding: 38px 0 29px;
+    }
+
+    &__header {
+        margin-bottom: 98px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 58.27px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 59px;
+        }
+    }
+
+    &__text {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+        margin-bottom: 37px;
+
+        @media (max-width: $tablet) {
+            @include font(24px, 35px, 400);
+            margin-bottom: 22.25px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 23px;
+        }
+    }
+
+    &__heading {
+        @include font(36px, 42px, 900);
+        position: relative;
+        text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            @include font(24px, 28px, 900);
+        }
+
+        &::before {
+            content: "";
+            border-top: 4px solid $lineColor;
+            width: 170px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            display: inline-block;
+            transform: translateX(-50%) translateY(44px);
+
+            @media (max-width: $tablet) {
+                width: 148px;
+                transform: translateX(-50%) translateY(30.27px);
+            }
+
+            @media (max-width: $mobile) {
+                width: 134px;
+                transform: translateX(-50%) translateY(30px);
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 42px 51px;
+
+        @media (max-width: $tablet) {
+            grid-gap: 43px 53.74px;
+        }
+
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 40px;
+            justify-items: center;
+        }
+    }
+}
+
+.review {
+    display: flex;
+    text-align: start;
+    column-gap: 51px;
+
+    @media (max-width: $tablet) {
+        column-gap: 48.99px;
+    }
+
+    @media (max-width: $mobile) {
+        display: block;
+        margin-bottom: 28.84px;
+        text-align: center;
+    }
+
+    &__wrapper-icon {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        @media (max-width: $tablet) {
+            width: 88.16px;
+            height: 88.16px;
+            margin: 0 auto 28.84px; 
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        flex-grow:1;
+    }
+
+    &__person {
+        @include font(24px, 28px, 700);
+        margin-bottom: 12px;
+        text-transform: uppercase;
+
+        @media (max-width: $tablet) {
+            @include font(18px, 21px, 700);
+            margin-bottom: 7px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__position {
+        @include font(18px, 21px, 400);
+        margin-bottom: 87px;
+        text-transform: uppercase;
+        position: relative;
+
+        @media (max-width: $tablet) {
+            @include font(14px, 16px, 400);
+            margin-bottom: 62px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 54px;
+        }
+
+        &::before {
+            content: "";
+            border-top: 4px solid $lineColor;
+            width: 70px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: inline-block;
+            transform: translateY(32px);
+
+            @media (max-width: $tablet) {
+                width: 47.47px;
+                transform: translateY(21.27px);
+            }
+
+            @media (max-width: $mobile) {
+                width: 134px;
+                left: 50%;
+                transform: translateX(-50%) translateY(21px);
+            }
+        }
+    }
+
+    &__text {
+        @include font(18px, 21px, 400);
+
+        @media (max-width: $mobile) {
+            @include font(14px, 16px, 400);
+        }
+    }
+}
