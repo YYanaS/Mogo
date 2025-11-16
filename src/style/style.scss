@@ -14,11 +14,15 @@ $sectionColor: #2D3033;
 $descriptionColor: #000;
 $buttonBgColorHover: #fff;
 $textColorHover: #F4BF87;
+$textFbColor: #A9AFB1;
 $buttonBgColorActive: #364b4c;
 $advantagesBgColor: #95E1D3;
 $socialmedBgColor: #F9EFCF;
 $sectionBgColor: #fff;
-$backgroundImage: url('../media/background__img.webp');
+$bgImage1: url('../media/background__img1.webp');
+$bgImage2: url('../media/background__img2.webp');
+$bgImage3: url('../media/background__img3.webp');
+$bgImage4: url('../media/background__img4.webp');
 
 $font-primary: "Raleway", sans-serif;
 $font-secondary: "Kaushan Script", cursive;
@@ -31,6 +35,18 @@ $mobile: 767px;
     font-size: $fontSize;
     line-height: $lineHeight;
     font-weight: $fontWeight;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes header-bg {
@@ -97,6 +113,33 @@ $mobile: 767px;
     }
 }
 
+@keyframes waterRipple {
+    0% {
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+
+    25% {
+        transform: scale(1.02) translateY(-2px);
+        filter: blur(1px);
+    }
+
+    50% {
+        transform: scale(0.98) translateY(2px);
+        filter: blur(0.5px);
+    }
+
+    75% {
+        transform: scale(1.03) translateY(-1px);
+        filter: blur(0);
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
 body {
     font-family: $font-primary;
 
@@ -116,7 +159,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     padding: 45px 0;
     animation: header-bg linear;
     animation-timeline: scroll(root block);
@@ -209,6 +252,7 @@ body {
 
         &~.nav-mobile {
             left: 0;
+            opacity: 1;
         }
 
         &~.header__burger-overlay {
@@ -236,24 +280,48 @@ body {
 
 }
 
-
 .welcome {
     min-height: 100vh;
-    background: $gradientColor, $backgroundImage;
+    background: $gradientColor, $bgImage1;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 122px 0 22px;
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
 
-    @media (max-width: $mobile) {
-        padding: 42px;
+    &-second {
+        background: $gradientColor, $bgImage2;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-third {
+        background: $gradientColor, $bgImage3;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-fourth {
+        background: $gradientColor, $bgImage4;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     &__container {
         text-align: center;
+        margin-bottom: 205px;
+
+        @media (max-width: $tablet) {
+            margin-bottom: 140.31px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-bottom: 99.75px;
+        }
     }
 
     &__title {
@@ -261,6 +329,7 @@ body {
         font-family: $font-secondary;
         color: $textBannerColor;
         margin-bottom: 2px;
+        animation: fadeUp 1s ease forwards;
 
         @media (max-width: $tablet) {
             @include font(48px, 70px, 400);
@@ -280,6 +349,7 @@ body {
         color: $textBannerColor;
         position: relative;
         margin-bottom: 116px;
+        animation: fadeUp 1s ease forwards;
 
         @media (max-width: $tablet) {
             @include font(96px, 117px, 700);
@@ -322,10 +392,10 @@ body {
         padding: 22px;
         max-width: 370px;
         width: 100%;
-        margin-bottom: 137px;
         color: $buttonColor;
         cursor: pointer;
-        transition: all 0.3s linear;
+        animation: fadeBtnUp 1s ease forwards;
+        transition: all 0.4s ease;
 
         @media (max-width: $tablet) {
             max-width: 318px;
@@ -353,84 +423,59 @@ body {
 
     }
 
-    &__list {
-        display: flex;
-        column-gap: 30px;
-        list-style-type: none;
-        justify-content: space-between;
 
-        @media (max-width: $tablet) {
-            column-gap: 20px;
-        }
-    }
+}
 
-    &__btn-list {
-        background-color: transparent;
-        border: none;
-        border-top: 4px solid $buttonColor;
-        text-transform: uppercase;
-        font-family: $font-primary;
-        @include font(18px, 21px, 500);
-        cursor: pointer;
-        max-width: 270px;
-        width: 100%;
-        color: $textBannerColor;
-        padding: 21px 0;
-        text-align: left;
+.banner {
+    margin-bottom: 60px;
 
-        @media (max-width: $tablet) {
-            @include font(14px, 16px, 500);
-            padding: 15px 0;
-            max-width: 233px;
-        }
 
-        @media (max-width: $mobile) {
-            @include font(0px, 0px, 0);
-            min-width: 57px;
-            padding: 0;
-        }
-    }
-
-    &__btn-list_first {
-        @media (max-width: $mobile) {
-            border-top: 4px solid $lineColor;
-        }
-    }
-
-    &__number {
-        @include font(36px, 42px, 700);
-
-        @media (max-width: $tablet) {
-            @include font(24px, 28px, 700);
-        }
-
-        @media (max-width: $mobile) {
-            @include font(0px, 0px, 0);
-        }
-    }
-
-    &__item {
+    .swiper-pagination {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        justify-content: center;
         position: relative;
-        width: 100%;
+        transform: translateY(-85px);
 
-        &:first-of-type::after {
+        @media (max-width: $tablet) {
+            transform: translateY(-57.48p);
+        }
+
+        @media (max-width: $mobile) {
+            transform: translateY(-42px);
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: $buttonColor;
+        cursor: pointer;
+        width: 100%;
+        height: 4px;
+        border-radius: 0px;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        position: relative;
+
+        &::after {
             content: '';
             border-top: 4px solid $lineColor;
-            width: 70px;
+            width: 25.926%;
             position: absolute;
             top: 0;
             left: 0;
             display: inline-block;
 
             @media (max-width: $tablet) {
-                width: 64px;
+                width: 27.468%;
             }
 
             @media (max-width: $mobile) {
-                width: 0;
+                width: 100%;
             }
         }
-
     }
 }
 
@@ -515,7 +560,8 @@ body {
         left: -100%;
         width: 100vw;
         height: 100vh;
-        background: $gradientColor, $backgroundImage;
+        background: $gradientColor, $bgImage1;
+        opacity: 0;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -784,6 +830,30 @@ body {
         padding: 64px 0px;
         color: $textBannerColor;
         border-right: 1px solid $lineBannerColor;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.6s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.05); // лёгкий блик на фоне
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+        }
+
+        &:hover::after {
+            left: 125%;
+        }
 
         &:first-child {
             border-left: 1px solid $lineBannerColor;
@@ -823,7 +893,8 @@ body {
     &__number {
         @include font(64px, 75px, 700);
         margin-bottom: 28px;
-        display: block;
+        display: inline-block;
+        transition: transform 0.3s ease, filter 0.3s ease;
 
         @media (max-width: $tablet) {
             @include font(48px, 50px, 700);
@@ -932,10 +1003,6 @@ body {
     @media (max-width: $mobile) {
         column-gap: 20px;
         width: 100%;
-    }
-
-    &:hover {
-        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
     &__wrapper-icon {
@@ -1373,6 +1440,302 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: -1;
+    }
+}
+
+.feedbacks {
+    background-color: #F8F8F8;
+    padding: 42px 0;
+    margin-bottom: 84px;
+
+    @media (max-width: $tablet) {
+        padding: 28px 0;
+        margin-bottom: 57.75px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 35px 0 28.51px;
+        margin-bottom: 29px;
+    }
+}
+
+.feedback {
+    display: flex;
+    column-gap: 30px;
+    padding: 0 100px;
+
+    @media (max-width: $tablet) {
+        padding: 0 84px 0 100px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0;
+        flex-direction: column;
+        row-gap: 41.72px;
+    }
+
+    &__wrapper-img {
+        aspect-ratio: 1 / 1;
+        width: 170px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @media (max-width: $tablet) {
+            width: 115.28px;
+        }
+
+        @media (max-width: $mobile) {
+            margin: 0 auto;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+
+    &__text {
+        @include font(24px, 28px, 500);
+        font-style: italic;
+        margin-bottom: 31px;
+        color: $textFbColor;
+
+        @media (max-width: $tablet) {
+            @include font(18px, 21px, 500);
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: $mobile) {
+            @include font(14px, 16px, 500);
+            margin-bottom: 29px;
+        }
+    }
+
+    &__wrapper-author {
+        display: flex;
+        column-gap: 56px;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            column-gap: 37.8px;
+        }
+
+        @media (max-width: $mobile) {
+            column-gap: 28px;
+        }
+
+    }
+
+    &__line {
+        width: 70px;
+        height: 4px;
+        background-color: $lineColor;
+
+        @media (max-width: $tablet) {
+            width: 47.47px;
+        }
+
+        @media (max-width: $mobile) {
+            width: 57px;
+            ;
+        }
+    }
+
+    &__author {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+
+        @media (max-width: $tablet) {
+            @include font(24px, 35px, 400);
+        }
+
+        @media (max-width: $mobile) {
+            @include font(18px, 26px, 400);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16.33px;
+        height: 30.15px;
+
+        @media (max-width: $tablet) {
+            width: 28.48px;
+        }
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__pagination {
+        position: static;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20.51px;
+
+
+        @media (min-width: $mobile) {
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            width: 9.49px;
+            height: 9.49px;
+            border: 1px solid #C6CBCD;
+            background-color: transparent;
+            opacity: 1;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+
+            &-active {
+                background-color: #C6CBCD;
+            }
+        }
+    }
+}
+
+.comments {
+    background-color: #F8F8F8;
+    padding: 42px 0;
+
+    @media (max-width: $tablet) {
+        padding: 28px 0;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 35px 0 28.51px;
+    }
+}
+
+.comment {
+    display: flex;
+    column-gap: 30px;
+    padding: 0 100px;
+
+    @media (max-width: $tablet) {
+        padding: 0 84px 0 100px;
+    }
+
+    @media (max-width: $mobile) {
+        padding: 0;
+    }
+
+    &__wrapper-icon {
+        aspect-ratio: 1 / 1;
+        width: 170px;
+        flex-shrink: 0;
+        border: 2px solid #95E1D3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: $tablet) {
+            width: 115.28px;
+        }
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__text {
+        @include font(24px, 28px, 500);
+        font-style: italic;
+        margin-bottom: 31px;
+        color: $textFbColor;
+
+        @media (max-width: $tablet) {
+            @include font(18px, 21px, 500);
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: $mobile) {
+            @include font(14px, 16px, 500);
+            margin-bottom: 29px;
+        }
+    }
+
+    &__wrapper-author {
+        display: flex;
+        column-gap: 56px;
+        align-items: center;
+
+        @media (max-width: $tablet) {
+            column-gap: 37.8px;
+        }
+
+    }
+
+    &__line {
+        width: 70px;
+        height: 4px;
+        background-color: $lineColor;
+
+        @media (max-width: $tablet) {
+            width: 47.47px;
+        }
+    }
+
+    &__author {
+        @include font(30px, 44px, 400);
+        font-family: $font-secondary;
+
+        @media (max-width: $tablet) {
+            @include font(24px, 35px, 400);
+        }
+
+        @media (max-width: $mobile) {
+            @include font(18px, 26px, 400);
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16.33px;
+        height: 30.15px;
+
+        @media (max-width: $tablet) {
+            width: 28.48px;
+        }
+
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__pagination {
+        position: static;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20.51px;
+
+
+        @media (min-width: $mobile) {
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            width: 9.49px;
+            height: 9.49px;
+            border: 1px solid #C6CBCD;
+            background-color: transparent;
+            opacity: 1;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+
+            &-active {
+                background-color: #C6CBCD;
+            }
+        }
     }
 }
 
